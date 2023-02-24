@@ -46,6 +46,7 @@ from rental;
 # 8. How many rentals were in the last month of activity?
 SELECT distinct(MONTH(rental_date)), count(*)
 FROM rental
+WHERE YEAR(rental_date) = 2006
 GROUP BY rental_date
 ORDER BY rental_id desc
 LIMIT 1;
